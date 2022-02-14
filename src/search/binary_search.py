@@ -1,5 +1,5 @@
 def binary_search(list, item):
-    if item == None:
+    if item is None:
         return None
 
     if len(list) == 0:
@@ -24,10 +24,10 @@ def binary_search_recursive(list, item, low=0, high=None):
     if len(list) == 0:
         return None
 
-    if item == None:
+    if item is None:
         return None
 
-    if high == None:
+    if high is None:
         high = len(list) - 1
 
     mid = (high + low) // 2
