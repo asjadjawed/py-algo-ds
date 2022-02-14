@@ -25,7 +25,8 @@
     "ms-python.python",
     "njpwerner.autodocstring",
     "visualstudioexptteam.vscodeintellicode",
-    "github.copilot"
+    "github.copilot",
+    "snyk-security.snyk-vulnerability-scanner"
   ]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
