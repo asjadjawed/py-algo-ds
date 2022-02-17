@@ -1,5 +1,5 @@
 import unittest
-from search.binary_search import binary_search, binary_search_recursive
+from src.search.binary_search import binary_search, binary_search_recursive
 
 
 class TestBinarySearch(unittest.TestCase):

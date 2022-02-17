@@ -1,5 +1,5 @@
 import unittest
-from utils.mock import mock
+from src.utils.mock import mock
 
 
 class TestMock(unittest.TestCase):
