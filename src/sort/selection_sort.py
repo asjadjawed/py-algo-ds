@@ -6,7 +6,6 @@ def selection_sort(arr):
         return arr
 
     for i in range(len(arr)):
-        ival = arr[i]
         smallest_index = i
         for j in range(i, len(arr)):
             if arr[j] < arr[smallest_index]:
