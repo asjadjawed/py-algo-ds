@@ -3,10 +3,10 @@ asttokens==2.0.5
 autopep8==1.6.0
 backcall==0.2.0
 black==22.1.0
-click==8.0.3
+click==8.0.4
 decorator==5.1.1
-executing==0.8.2
-ipython==8.0.1
+executing==0.8.3
+ipython==8.1.1
 isort==5.10.1
 jedi==0.18.1
 lazy-object-proxy==1.7.1
@@ -17,7 +17,7 @@ parso==0.8.3
 pathspec==0.9.0
 pexpect==4.8.0
 pickleshare==0.7.5
-platformdirs==2.5.0
+platformdirs==2.5.1
 prompt-toolkit==3.0.28
 ptyprocess==0.7.0
 pure-eval==0.2.2
