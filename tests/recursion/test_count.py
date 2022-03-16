@@ -2,7 +2,7 @@ import unittest
 from src.recursion.count import recursive_count
 
 
-class TestSum(unittest.TestCase):
+class TestCount(unittest.TestCase):
 
     def test_none(self):
         '''Testing None'''
