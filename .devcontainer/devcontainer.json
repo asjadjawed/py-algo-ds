@@ -24,8 +24,7 @@
     "ms-python.vscode-pylance",
     "ms-python.python",
     "njpwerner.autodocstring",
-    "visualstudioexptteam.vscodeintellicode",
-    "github.copilot"
+    "visualstudioexptteam.vscodeintellicode"
   ]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
