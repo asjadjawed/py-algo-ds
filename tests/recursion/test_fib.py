@@ -6,6 +6,14 @@ class TestFib(unittest.TestCase):
 
     def test_zero(self):
         '''Fib of 0'''
+        with self.assertRaises(ValueError):
+            fib_rec(-1)
+        with self.assertRaises(ValueError):
+            fib_rec_memo(-1)
+        with self.assertRaises(ValueError):
+            fib_iter(-1)
+
+        '''Fib of 0'''
         self.assertEqual(fib_rec(0), 0)
         self.assertEqual(fib_rec_memo(0), 0)
         self.assertEqual(fib_iter(0), 0)
