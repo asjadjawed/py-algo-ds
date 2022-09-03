@@ -28,12 +28,11 @@
 	"njpwerner.autodocstring",
 	"streetsidesoftware.code-spell-checker",
 	"visualstudioexptteam.vscodeintellicode",
-	"visualstudioexptteam.intellicode-api-usage-examples",
-	"visualstudioexptteam.vscodeintellicode-completions",
 	"snyk-security.snyk-vulnerability-scanner",
 	"Gruntfuggly.todo-tree",
 	"oderwat.indent-rainbow",
-	"viktorzetterstrom.non-breaking-space-highlighter"
+	"viktorzetterstrom.non-breaking-space-highlighter",
+	"TabNine.tabnine-vscode"
 ]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
