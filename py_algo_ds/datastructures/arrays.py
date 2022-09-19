@@ -1,3 +1,7 @@
+"""
+Module for array data structures
+"""
+
 from array import array as arr
 
 # Example of an array (this is actually a list in Python)
@@ -8,9 +12,8 @@ b = arr('i', [1, 2, 3])
 
 
 def main():
-
-    print(f'a: {a}')
-
+    """Main Function
+    """
     print(f'b in bytes: {b.tobytes()}')
     b.byteswap()
     print(f'b in bytes after byteswap: {b.tobytes()}')
