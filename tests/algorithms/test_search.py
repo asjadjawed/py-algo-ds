@@ -3,8 +3,9 @@ Testing Linear Search
 """
 
 from py_algo_ds.algorithms.linear_search import search as linear_search
+from py_algo_ds.algorithms.binary_search import search as binary_search
 
-search_type = [linear_search]
+search_type = [linear_search, binary_search]
 
 
 class TestSearch:
