@@ -13,7 +13,19 @@ Includes the following all in pure python 🐍:
 ## Commands 🏃‍♂️
 
 Please run the following to enable Git Hooks.
-This enables auto-run of testing, linting and formatting on commit.
+
+On commit this runs:
+
+- testing
+- linting
+- formatting.
+
+### Install Git Hooks
+
+```bash
+$ ./install-hooks.sh
+# pre-commit installed at .git/hooks/pre-commit
+```
 
 ### Install Packages
 
@@ -27,13 +39,6 @@ $ poetry install
 ```bash
 $ poetry update
 # Updating dependencies
-```
-
-### Install Git Hooks
-
-```bash
-$ ./install-hooks.sh
-# pre-commit installed at .git/hooks/pre-commit
 ```
 
 ### Code formatting
