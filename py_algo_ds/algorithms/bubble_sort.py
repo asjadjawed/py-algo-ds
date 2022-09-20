@@ -17,4 +17,3 @@ def sort(arr: list[object]) -> list[object]:
         for p_y in range(0, p_x):
             if arr[p_y] > arr[p_y + 1]:
                 [arr[p_y], arr[p_y + 1]] = [arr[p_y + 1], arr[p_y]]
-    return arr
