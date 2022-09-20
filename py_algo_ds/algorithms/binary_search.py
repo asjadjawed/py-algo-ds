@@ -58,4 +58,5 @@ def search_recursion(iterable: list, item: object, start=0) -> int:
     if pointer < item:
         return search_recursion(iterable[mid+1: high+1], item, start+mid+1)
 
-    return -1  # this is not needed just making pylint happy
+    # this is not needed just making pylint happy
+    return -1  # pragma: no cover

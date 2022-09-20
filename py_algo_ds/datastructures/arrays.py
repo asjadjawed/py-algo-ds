@@ -11,7 +11,7 @@ a = [1, 2, 3]
 b = arr('i', [1, 2, 3])
 
 
-def main():
+def main():  # pragma: no cover
     """
     Main Function
     """
@@ -20,5 +20,5 @@ def main():
     print(f'b in bytes after byteswap: {b.tobytes()}')
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()
