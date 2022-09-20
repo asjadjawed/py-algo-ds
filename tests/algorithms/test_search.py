@@ -4,8 +4,9 @@ Testing Linear Search
 
 from py_algo_ds.algorithms.linear_search import search as linear_search
 from py_algo_ds.algorithms.binary_search import search as binary_search
+from py_algo_ds.algorithms.binary_search import search_recursion as binary_search_recursive
 
-search_type = [linear_search, binary_search]
+search_type = [linear_search, binary_search, binary_search_recursive]
 
 
 class TestSearch:
@@ -15,14 +16,14 @@ class TestSearch:
 
     def test_search_with_empty_list(self):
         """
-        test linear search with empty list
+        test search with empty list
         """
         for search in search_type:
             assert search([], 1) == -1
 
     def test_search_with_one_item(self):
         """
-        test linear search with one item
+        test search with one item
         """
         for search in search_type:
             assert search([1], 1) == 0
@@ -30,7 +31,7 @@ class TestSearch:
 
     def test_search_with_two_items(self):
         """
-        test linear search with two items
+        test search with two items
         """
         for search in search_type:
             assert search([1, 2], 1) == 0
@@ -39,7 +40,7 @@ class TestSearch:
 
     def test_search_with_five_items(self):
         """
-        test linear search with five items
+        test search with five items
         """
         for search in search_type:
             assert search([1, 2, 3, 4, 5], 2) == 1
@@ -53,7 +54,7 @@ class TestSearch:
 
     def test_linear_search_with_chars(self):
         """
-        test linear search with chars
+        test search with chars
         """
         for search in search_type:
             assert search(["a", "b", "c"], "a") == 0
