@@ -41,6 +41,13 @@ $ poetry update
 # Updating dependencies
 ```
 
+### REPL (IPython)
+
+```bash
+$ ipython
+# In [1]:
+```
+
 ### Code formatting
 
 ```bash
