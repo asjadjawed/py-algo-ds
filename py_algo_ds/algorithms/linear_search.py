@@ -4,7 +4,7 @@
 
 
 def search(iterable: list, item: object) -> int:
-    """_summary_Searches for the first occurrence of an element in a list.
+    """_summary_Searches for the first occurrence of an element in a list in O(n)
 
     :param l: The list to search.
     :param x: The element to search for.

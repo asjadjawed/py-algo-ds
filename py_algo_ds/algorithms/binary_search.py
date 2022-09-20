@@ -5,7 +5,7 @@ Binary Search
 
 def search(iterable: list, item: object) -> int:
     """
-    Searches for the first occurrence of an element in a list.
+    Searches for the first occurrence of an element in a list in O(log(n))
 
     :param l: The list to search.
     :param x: The element to search for.
