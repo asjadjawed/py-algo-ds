@@ -1,5 +1,5 @@
 """
-Testing Linear Search
+Testing Search
 """
 
 from py_algo_ds.algorithms.linear_search import search as linear_search
@@ -11,7 +11,7 @@ search_type = [linear_search, binary_search, binary_search_recursive]
 
 class TestSearch:
     """
-    test linear search
+    test search
     """
 
     def test_search_with_empty_list(self):
