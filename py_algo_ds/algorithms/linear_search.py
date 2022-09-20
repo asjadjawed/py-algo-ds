@@ -1,6 +1,6 @@
 """
-    Linear Search
-    """
+Linear Search
+"""
 
 
 def search(iterable: list, item: object) -> int:
