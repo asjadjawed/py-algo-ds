@@ -3,22 +3,12 @@ The main module for the project.
 """
 
 
-def hello() -> str:
-    """
-    Function to say Hello Python
-
-    Returns:
-        str: "Hello Python!"
-    """
-    return "Hello Python!"
-
-
-def main() -> None:
+def main() -> None:  # pragma: no cover
     """
     Main function to run the hello function.
     """
-    print(hello())
+    print("Hello to Datastructures and Algorithms in Python")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()
