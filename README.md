@@ -22,6 +22,8 @@ On commit this runs:
 
 ### Install Git Hooks
 
+Please *Install Packages* before installing *Git Hooks*
+
 ```bash
 $ ./install-hooks.sh
 # pre-commit installed at .git/hooks/pre-commit
