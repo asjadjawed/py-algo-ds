@@ -12,7 +12,8 @@ b = arr('i', [1, 2, 3])
 
 
 def main():
-    """Main Function
+    """
+    Main Function
     """
     print(f'b in bytes: {b.tobytes()}')
     b.byteswap()

@@ -4,7 +4,8 @@ The main module for the project.
 
 
 def hello() -> str:
-    """Function to say Hello Python
+    """
+    Function to say Hello Python
 
     Returns:
         str: "Hello Python!"
@@ -13,9 +14,9 @@ def hello() -> str:
 
 
 def main() -> None:
-    """Main function to run the hello function.
     """
-    print(hello())
+    Main function to run the hello function.
+    """
     print(hello())
 
 
