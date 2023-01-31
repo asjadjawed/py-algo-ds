@@ -15,48 +15,46 @@ def search(iterable: list, item: object) -> int:
         int: the index of the element if found else -1
     """
     low = 0
-    high = len(iterable) - 1
-    while low <= high:
+    high = len(iterable)
+    while low < high:
         mid = (low + high) // 2
         pointer = iterable[mid]
         if pointer == item:
             return mid
-        if pointer > item:
-            high = mid - 1
-        else:
+        if pointer < item:
             low = mid + 1
+        else:
+            high = mid
     return -1
 
 
-def search_recursion(iterable: list, item: object, start=0) -> int:
-    """
-    Searches for the first occurrence of an element in a list in O(log(n))
+def search_recursion(iterable: list, item: object, start=None, end=None) -> int:
+    """_summary_
 
     Args:
         iterable (list): The list to search
         item (object): The element to search for
-        start (int, optional): Do not use, it is for keeping track of index. Defaults to 0.
+        start (int, optional): _description_. Defaults to None. Auto-calculated.
+        end (int, optional): _description_. Defaults to None. Auto-calculated.
 
     Returns:
         int: the index of the element if found else -1
     """
-    low = 0
-    high = len(iterable) - 1
+    if start is None:
+        start = 0
+    if end is None:
+        end = len(iterable)-1
 
-    if high < low:
+    if start > end:
         return -1
 
-    mid = (low + high) // 2
+    mid = (start + end) // 2
     pointer = iterable[mid]
 
     if pointer == item:
-        return start + mid
+        return mid
 
     if pointer > item:
-        return search_recursion(iterable[low:mid], item, low)
+        return search_recursion(iterable, item, start, mid-1)
 
-    if pointer < item:
-        return search_recursion(iterable[mid+1: high+1], item, start+mid+1)
-
-    # this is not needed just making pylint happy
-    return -1  # pragma: no cover
+    return search_recursion(iterable, item, mid+1, end)
