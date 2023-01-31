@@ -11,5 +11,6 @@
     "pytest",
     "rcfile",
     "tobytes"
-  ]
+  ],
+  "python.analysis.typeCheckingMode": "basic"
 }
