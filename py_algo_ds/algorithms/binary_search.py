@@ -14,6 +14,9 @@ def search(iterable: list, item: object) -> int:
     Returns:
         int: the index of the element if found else -1
     """
+    if not iterable:
+        return -1
+
     low = 0
     high = len(iterable)
     while low < high:
@@ -29,17 +32,21 @@ def search(iterable: list, item: object) -> int:
 
 
 def search_recursion(iterable: list, item: object, start=None, end=None) -> int:
-    """_summary_
+    """
+    Searches for the first occurrence of an element in a list in O(log(n))
 
     Args:
         iterable (list): The list to search
         item (object): The element to search for
-        start (int, optional): _description_. Defaults to None. Auto-calculated.
-        end (int, optional): _description_. Defaults to None. Auto-calculated.
+        start (int, optional): Defaults to None. Auto-calculated.
+        end (int, optional): Defaults to None. Auto-calculated.
 
     Returns:
         int: the index of the element if found else -1
     """
+    if not iterable:
+        return -1
+
     if start is None:
         start = 0
     if end is None:
