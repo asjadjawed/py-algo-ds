@@ -5,12 +5,14 @@
   "cSpell.words": [
     "autopep",
     "byteswap",
+    "frombytes",
     "ipython",
     "pylint",
     "pylintrc",
     "pytest",
     "rcfile",
-    "tobytes"
+    "tobytes",
+    "typecode"
   ],
   "python.analysis.typeCheckingMode": "basic"
 }

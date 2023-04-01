@@ -1,24 +1,38 @@
 """
-Module for array data structures
+Module for demonstrating array data structures and data interpretation.
+Underlying data in arrays can be interpreted differently depending on how it's read.
 """
 
 from array import array as arr
 
-# Example of an array (this is actually a list in Python)
-a = [1, 2, 3]
+# Create an array of integers
+integer_array = arr('i', [1, 2, 3])
 
-# b is an array of 3 elements
-b = arr('i', [1, 2, 3])
+# Create a bytearray object from the string "Hello, World" using utf-8 encoding
+buffer = bytearray("Hello Python", "utf-8")
+
+# Create two array objects with different types (byte and float) and populate them from the buffer
+byte_array = arr('b')
+byte_array.frombytes(buffer)
+
+float_array = arr('f')
+float_array.frombytes(buffer)
 
 
-def main():  # pragma: no cover
+def main():
     """
     Main Function
     """
-    print(f'b in bytes: {b.tobytes()}')
-    b.byteswap()
-    print(f'b in bytes after byteswap: {b.tobytes()}')
+    print(buffer)
+    print(buffer.decode("utf-16"))
+    print(byte_array[0])
+    print(float_array[1])
+
+    # Little Endian vs Big Endian
+    print(f'integer_array in bytes: {integer_array.tobytes()}')
+    integer_array.byteswap()
+    print(f'integer_array in bytes after byteswap: {integer_array.tobytes()}')
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     main()
