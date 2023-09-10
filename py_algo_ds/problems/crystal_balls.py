@@ -37,6 +37,7 @@ def crystal_balls(building_floors: list[bool]) -> int:
     jump_length = math.floor(math.sqrt(len(building_floors)))
 
     # python for loop variables are not scoped to the loop
+    i = 0
     for i in range(0, len(building_floors), jump_length):
         if building_floors[i]:
             break
