@@ -50,7 +50,7 @@ def search_recursion(iterable: list, item: object, start=None, end=None) -> int:
     if start is None:
         start = 0
     if end is None:
-        end = len(iterable)-1
+        end = len(iterable) - 1
 
     if start > end:
         return -1
@@ -62,6 +62,6 @@ def search_recursion(iterable: list, item: object, start=None, end=None) -> int:
         return mid
 
     if pointer > item:
-        return search_recursion(iterable, item, start, mid-1)
+        return search_recursion(iterable, item, start, mid - 1)
 
-    return search_recursion(iterable, item, mid+1, end)
+    return search_recursion(iterable, item, mid + 1, end)

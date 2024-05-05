@@ -53,18 +53,15 @@ $ ipython
 ### Code formatting
 
 ```bash
-$ autopep8 --in-place --recursive --verbose .
-# [file:./tests/__init__.py]
-# --->  Applying global fix for E265
-# --->  0 issue(s) to fix {}
+$ ruff format
+# 20 files left unchanged  
 ```
 
 ### Code Linting
 
 ```bash
-$ pylint .
-# --------------------------------------------------------------------
-# Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+$ ruff check 
+# All checks passed!
 ```
 
 ### Generate pylint Config

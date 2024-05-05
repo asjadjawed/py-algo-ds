@@ -5,7 +5,7 @@ Test for two number sum
 from py_algo_ds.problems.two_number_sum import two_number_sum
 
 
-class TestTwoNumberSum():
+class TestTwoNumberSum:
     """Test two sum problem"""
 
     def test_valid_pair(self):
@@ -25,8 +25,7 @@ class TestTwoNumberSum():
     def test_large_numbers(self):
         """large numbers"""
         result = two_number_sum([1000000, 2000000, 3000000], 5000000)
-        assert result is not None and sorted(
-            result) == sorted([2000000, 3000000])
+        assert result is not None and sorted(result) == sorted([2000000, 3000000])
 
     def test_empty_list(self):
         """empty list"""

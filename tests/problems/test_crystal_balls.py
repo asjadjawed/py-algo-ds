@@ -7,8 +7,9 @@ from random import randint
 from py_algo_ds.problems.crystal_balls import crystal_balls
 
 
-class TestCrystalBalls():
+class TestCrystalBalls:
     "Test 2 Crystal Balls Problem"
+
     total_floors = 10  # has to be at least 1
     # the end is inclusive so can result in fully false data
     idx = randint(0, total_floors)

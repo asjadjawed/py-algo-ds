@@ -1,15 +1,15 @@
 repos:
   - repo: local
     hooks:
-      - id: pylint
-        name: pylint
-        entry: poetry run pylint .
+      - id: ruff-lint
+        name: ruff-lint
+        entry: poetry run ruff check
         language: system
         always_run: true
         pass_filenames: false
-      - id: autopep8
-        name: autopep8
-        entry: poetry run autopep8 --in-place --recursive --verbose .
+      - id: ruff-format
+        name: ruff-format
+        entry: poetry run ruff format
         language: system
         always_run: true
         pass_filenames: false

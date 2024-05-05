@@ -35,7 +35,7 @@ def test_multiple_elements():
 
 def test_sorted_elements():
     """
-    test sorted element list    
+    test sorted element list
     """
     arr = [1, 2, 3, 4, 5]
     bubble_sort(arr)
@@ -44,7 +44,7 @@ def test_sorted_elements():
 
 def test_reverse_sorted_elements():
     """
-    test reverse sorted element list    
+    test reverse sorted element list
     """
     arr = [5, 4, 3, 2, 1]
     bubble_sort(arr)
@@ -53,7 +53,7 @@ def test_reverse_sorted_elements():
 
 def test_duplicate_elements():
     """
-    test duplicate element list    
+    test duplicate element list
     """
     arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
     bubble_sort(arr)

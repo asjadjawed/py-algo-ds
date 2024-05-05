@@ -42,12 +42,15 @@ def test_search_none_item():
     assert search(["apple", "banana", "cherry"], None) == -1
 
 
-@pytest.mark.parametrize("iterable, item", [
-    (["apple", "banana", "cherry"], 1),
-    ([1, 2, 3, 4, 5], "banana"),
-    (["apple", "banana", "cherry"], 1.5),
-    ([1, 2, 3, 4, 5], 1.5)
-])
+@pytest.mark.parametrize(
+    "iterable, item",
+    [
+        (["apple", "banana", "cherry"], 1),
+        ([1, 2, 3, 4, 5], "banana"),
+        (["apple", "banana", "cherry"], 1.5),
+        ([1, 2, 3, 4, 5], 1.5),
+    ],
+)
 def test_search_mismatched_types(iterable, item):
     """
     Test search mismatched types
