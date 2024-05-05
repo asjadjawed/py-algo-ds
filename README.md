@@ -64,23 +64,9 @@ $ ruff check
 # All checks passed!
 ```
 
-### Generate pylint Config
-
-```bash
-$ pylint --generate-rcfile > pylintrc
-# --> File .pylintrc added with default config
-```
-
 ### Testing
 
 ```bash
 $ pytest
 # --> runs tests using pytest
-```
-
-### Test Coverage
-
-```bash
-$ coverage report
-# --> displays test coverage report
 ```
