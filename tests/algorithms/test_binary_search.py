@@ -3,6 +3,7 @@ Test Binary Search
 """
 
 import pytest
+
 from py_algo_ds.algorithms.binary_search import search, search_recursion
 
 

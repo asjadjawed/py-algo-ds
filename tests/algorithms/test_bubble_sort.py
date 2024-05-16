@@ -3,6 +3,7 @@ Testing Bubble Sort
 """
 
 import pytest
+
 from py_algo_ds.algorithms.bubble_sort import bubble_sort
 
 

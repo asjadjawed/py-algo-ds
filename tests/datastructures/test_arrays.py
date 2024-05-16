@@ -4,13 +4,14 @@ Test cases for arrays, buffers, encoding
 
 from array import array as arr
 from typing import Literal
+
 import pytest
 
 from py_algo_ds.datastructures.arrays import (
-    integer_array,
     buffer,
     byte_array,
     float_array,
+    integer_array,
 )
 
 

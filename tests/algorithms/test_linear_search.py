@@ -3,6 +3,7 @@ Search Test
 """
 
 import pytest
+
 from py_algo_ds.algorithms.linear_search import search
 
 
