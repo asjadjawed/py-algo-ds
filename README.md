@@ -54,13 +54,13 @@ $ ipython
 
 ```bash
 $ ruff format
-# 20 files left unchanged  
+# 20 files left unchanged
 ```
 
 ### Code Linting
 
 ```bash
-$ ruff check 
+$ ruff check
 # All checks passed!
 ```
 
