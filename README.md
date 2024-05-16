@@ -32,14 +32,15 @@ $ ./install-hooks.sh
 ### Install Packages
 
 ```bash
-$ poetry install
+$ poetry install --sync
 # Installing dependencies from lock file
 ```
 
 ### Update Packages
 
 ```bash
-$ poetry update
+$ poetry update --sync
+$ pre-commit autoupdate
 # Updating dependencies
 ```
 
@@ -48,6 +49,13 @@ $ poetry update
 ```bash
 $ ipython
 # In [1]:
+```
+
+### Run pre-commit hooks
+
+```bash
+$ pre-commit run --all-files
+# 20 files left unchanged
 ```
 
 ### Code formatting
