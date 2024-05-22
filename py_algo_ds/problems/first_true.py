@@ -87,7 +87,7 @@ def first_not_smaller(arr: list[int], target: int) -> int:
     while low <= high:
         mid = low + (high - low) // 2
         current_value = arr[mid]
-
+        # understand that we are exhausting all 3 condition lt, gt, & eq
         if current_value >= target:
             boundary = mid
             high = mid - 1
