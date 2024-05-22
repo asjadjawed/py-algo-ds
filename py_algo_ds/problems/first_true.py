@@ -29,17 +29,20 @@ def find_boundary(arr: list[bool]) -> int:
     >>> find_boundary([True, True, True, True])
     0
     """
-    low, high = 0, len(arr) - 1
-    boundary_index = -1
+    low, high, boundary_index = 0, len(arr) - 1, -1
 
     while low <= high:
         mid = low + (high - low) // 2
         current_value = arr[mid]
 
         if current_value:
+            # we are setting boundary index since we at least found one
             boundary_index = mid
+            # we are shrinking the space and checking again if this is the first true
+            # if it isn't we will find another true in more iterations
             high = mid - 1
         else:
+            # if we didn't find a true we halve the search space and iterate again
             low = mid + 1
 
     return boundary_index
