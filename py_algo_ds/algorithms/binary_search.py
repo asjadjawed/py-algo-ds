@@ -3,7 +3,7 @@ Binary Search
 """
 
 
-def search(iterable: list[int], item: int) -> int:
+def binary_search(iterable: list[int], item: int) -> int:
     """
     Searches for the first occurrence of an element in a list in O(log(n))
 
@@ -30,7 +30,9 @@ def search(iterable: list[int], item: int) -> int:
     return -1
 
 
-def search_recursion(iterable: list[int], item: int, start=None, end=None) -> int:
+def binary_search_recursion(
+    iterable: list[int], item: int, start=None, end=None
+) -> int:
     """
     Searches for the first occurrence of an element in a list in O(log(n))
 
@@ -61,6 +63,6 @@ def search_recursion(iterable: list[int], item: int, start=None, end=None) -> in
         return mid
 
     if pointer > item:
-        return search_recursion(iterable, item, start, mid - 1)
+        return binary_search_recursion(iterable, item, start, mid - 1)
 
-    return search_recursion(iterable, item, mid + 1, end)
+    return binary_search_recursion(iterable, item, mid + 1, end)
