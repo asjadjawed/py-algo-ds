@@ -2,13 +2,17 @@
 
 ## Info 🔎
 
+Well documented code with test cases. This started as a repo for my students to practice.
+
+Just delete the code, re-write your solution and see if the tests pass. Enjoy 😊
+
 Includes the following all in pure python 🐍:
 
 - Common Data Structures 🧬
 - Common Algorithms 🪜
-- Problems with Tests 🧩
+- Problems to build your programming 💪
 
-(This is an example project for my students)
+*You can IPython as a REPL (in dependencies).*
 
 ## Commands 🏃‍♂️
 
