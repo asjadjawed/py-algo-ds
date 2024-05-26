@@ -65,3 +65,38 @@ def bubble_sort(arr: list[int]) -> list[int]:
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
+
+
+def quicksort(arr: list[int]):
+    """
+    Sorts an array using the Quicksort algorithm.
+
+    Quicksort is a divide-and-conquer algorithm that works by selecting a 'pivot' element from the array
+    and partitioning the other elements into two sub-arrays, according to whether they are less than or
+    greater than the pivot. The sub-arrays are then sorted recursively.
+
+    Parameters:
+    arr (list): The list of elements to be sorted.
+
+    Returns:
+    list: A new sorted list containing the same elements as `arr`.
+
+    Example:
+    >>> quicksort([3, 6, 8, 10, 1, 2, 1])
+    [1, 1, 2, 3, 6, 8, 10]
+
+    >>> quicksort([])
+    []
+
+    >>> quicksort([1])
+    [1]
+    """
+
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[len(arr) // 2]
+        left = [x for x in arr if x < pivot]
+        middle = [x for x in arr if x == pivot]
+        right = [x for x in arr if x > pivot]
+        return quicksort(left) + middle + quicksort(right)
