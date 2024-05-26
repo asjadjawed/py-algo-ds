@@ -91,7 +91,6 @@ def quicksort(arr: list[int]):
     >>> quicksort([1])
     [1]
     """
-
     if len(arr) <= 1:
         return arr
     else:
