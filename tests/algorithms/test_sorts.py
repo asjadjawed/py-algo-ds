@@ -4,8 +4,7 @@ Tests for various sorting algorithms
 
 import pytest
 
-from py_algo_ds.algorithms.bubble_sort import bubble_sort
-from py_algo_ds.algorithms.selection_sort import selection_sort
+from py_algo_ds.algorithms.sorts import bubble_sort, selection_sort
 
 
 @pytest.mark.parametrize("algorithm", [selection_sort, bubble_sort])
