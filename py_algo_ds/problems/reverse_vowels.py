@@ -1,5 +1,5 @@
 """
-2 - pointer problem for string manipulation
+2 pointer problem for string manipulation
 """
 
 
