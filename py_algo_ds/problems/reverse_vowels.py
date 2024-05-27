@@ -23,22 +23,21 @@ def reverse_vowels(s: str) -> str:
         >>> reverseVowels(" ")
         ' '
     """
-    vowels = {"a", "e", "i", "o", "u"}
-    reversed_vowels = list(s)
-    i, j = 0, len(reversed_vowels) - 1
+    vowels = "aeiou"
+    rev_vowels = list(s)
+    i, j = 0, len(rev_vowels) - 1
 
     while i < j:
-        while i < j and reversed_vowels[i].lower() not in vowels:
+        while i < j and rev_vowels[i].lower() not in vowels:
             i += 1
-        while i < j and reversed_vowels[j].lower() not in vowels:
+        while i < j and rev_vowels[j].lower() not in vowels:
             j -= 1
 
-        if i < j:
-            reversed_vowels[i], reversed_vowels[j] = (
-                reversed_vowels[j],
-                reversed_vowels[i],
-            )
-            i += 1
-            j -= 1
+        rev_vowels[i], rev_vowels[j] = (
+            rev_vowels[j],
+            rev_vowels[i],
+        )
+        i += 1
+        j -= 1
 
-    return "".join(reversed_vowels)
+    return "".join(rev_vowels)
