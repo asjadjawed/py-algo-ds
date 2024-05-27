@@ -1,15 +1,23 @@
 {
   "cSpell.words": [
+    "AEIO",
     "autopep",
+    "buiutafel",
     "byteswap",
     "frombytes",
+    "holle",
     "ipython",
+    "leetcode",
+    "leotcede",
+    "prigrammong",
     "pylint",
     "pylintrc",
     "pytest",
     "rcfile",
     "tobytes",
-    "typecode"
+    "typecode",
+    "Uaeiou",
+    "UOIEA"
   ],
   "python.analysis.typeCheckingMode": "basic",
   "python.testing.pytestArgs": [
