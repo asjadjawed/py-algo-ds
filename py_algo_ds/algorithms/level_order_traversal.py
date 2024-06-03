@@ -2,14 +2,14 @@
 Level Order Traversal
 """
 
+from __future__ import annotations
+
 from collections import deque
 from typing import List, Optional
 
 
 class Node:
-    def __init__(
-        self, val: int, left: Optional["Node"] = None, right: Optional["Node"] = None
-    ):
+    def __init__(self, val: int, left: Node | None = None, right: Node | None = None):
         """
         Initialize a Node.
 
