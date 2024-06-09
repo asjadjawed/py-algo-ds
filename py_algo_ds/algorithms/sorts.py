@@ -3,6 +3,36 @@ Sorting Algorithms
 """
 
 
+def insertion_sort(arr: list[int]) -> list[int]:
+    """
+    Sorts a list of integers using the insertion sort algorithm.
+
+    Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time.
+    It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+
+    Args:
+        arr (list[int]): A list of integers to be sorted.
+
+    Returns:
+        list[int]: The sorted list of integers.
+
+    Example:
+        >>> insertion_sort([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
+        [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+        >>> insertion_sort([10, 3, 2, 8, 6, 7, 5])
+        [2, 3, 5, 6, 7, 8, 10]
+    """
+    for i, _ in enumerate(arr):
+        current = i
+        # gets the smallest element and inserts it at current index
+        while current > 0 and arr[current] < arr[current - 1]:
+            # swaps current smaller element with the element before it
+            arr[current], arr[current - 1] = arr[current - 1], arr[current]
+            current -= 1
+    return arr
+
+
 def selection_sort(arr: list[int]) -> list[int]:
     """
     Sorts an array of integers in ascending order using the selection sort algorithm.
