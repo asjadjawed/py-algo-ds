@@ -8,7 +8,8 @@ def insertion_sort(arr: list[int]) -> list[int]:
     Sorts a list of integers using the insertion sort algorithm.
 
     Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time.
-    It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+    It is much less efficient on large lists than more advanced algorithms such as quicksort, or merge sort.
+    As an example think of manually sorting playing cards.
 
     Args:
         arr (list[int]): A list of integers to be sorted.
@@ -23,13 +24,13 @@ def insertion_sort(arr: list[int]) -> list[int]:
         >>> insertion_sort([10, 3, 2, 8, 6, 7, 5])
         [2, 3, 5, 6, 7, 8, 10]
     """
-    for i, _ in enumerate(arr):
-        current = i
+    for i in range(len(arr)):
+        curr = i
         # gets the smallest element and inserts it at current index
-        while current > 0 and arr[current] < arr[current - 1]:
+        while curr > 0 and arr[curr] < arr[curr - 1]:
             # swaps current smaller element with the element before it
-            arr[current], arr[current - 1] = arr[current - 1], arr[current]
-            current -= 1
+            arr[curr], arr[curr - 1] = arr[curr - 1], arr[curr]
+            curr -= 1
     return arr
 
 
