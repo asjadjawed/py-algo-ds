@@ -4,8 +4,6 @@ Binary Search Tree
 
 from __future__ import annotations
 
-from typing import List, Optional
-
 
 class Node:
     """
@@ -22,15 +20,13 @@ class Node:
         right (Node | None): The right child of the node. Defaults to None.
     """
 
-    def __init__(
-        self, val: int, left: Optional[Node] = None, right: Optional[Node] = None
-    ):
+    def __init__(self, val: int, left: Node | None = None, right: Node | None = None):
         self.val = val
         self.left = left
         self.right = right
 
 
-def in_order_traversal(root: Optional[Node]):
+def in_order_traversal(root: Node | None):
     """
     Performs an in-order traversal of a binary tree and prints the value of each node.
 
@@ -43,7 +39,7 @@ def in_order_traversal(root: Optional[Node]):
         in_order_traversal(root.right)
 
 
-def pre_order_traversal(root: Optional[Node]):
+def pre_order_traversal(root: Node | None):
     """
     Performs a pre-order traversal of a binary tree and prints the value of each node.
 
@@ -56,7 +52,7 @@ def pre_order_traversal(root: Optional[Node]):
         pre_order_traversal(root.right)
 
 
-def post_order_traversal(root: Optional[Node]):
+def post_order_traversal(root: Node | None):
     """
     Performs a post-order traversal of a binary tree and prints the value of each node.
 
@@ -69,7 +65,7 @@ def post_order_traversal(root: Optional[Node]):
         print(root.val)
 
 
-def build_bst(values: List[str]) -> Node | None:
+def build_bst(values: list[str]) -> Node | None:
     """
     Builds a binary search tree (BST) from a list of values represented as strings.
     It builds the tree using pre-order traversal.
