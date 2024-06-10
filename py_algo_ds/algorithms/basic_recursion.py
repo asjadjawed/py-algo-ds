@@ -119,4 +119,5 @@ def zip_map(keys: list[str], values: list[int]):
     my_dict = zip_map(keys[1:], values[1:])
     # then it is populated after the recursive call
     my_dict[keys[0]] = values[0]
+    # and step by step dict is built and returned
     return my_dict
