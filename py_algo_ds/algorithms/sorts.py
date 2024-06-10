@@ -135,3 +135,60 @@ def quicksort(arr: list[int]):
         middle = [x for x in arr if x == pivot]
         right = [x for x in arr if x > pivot]
         return quicksort(left) + middle + quicksort(right)
+
+
+def merge_sort(arr: list[int]):
+    """
+    Sorts an array in ascending order using the merge sort algorithm.
+
+    Args:
+        arr (list): The list of elements to be sorted.
+
+    Returns:
+        list: A new list containing the sorted elements.
+    """
+    if len(arr) <= 1:
+        return arr
+
+    # Split the array into two halves
+    mid = len(arr) // 2
+    left_half = arr[:mid]
+    right_half = arr[mid:]
+
+    # Recursively sort both halves
+    left_sorted = merge_sort(left_half)
+    right_sorted = merge_sort(right_half)
+
+    # Merge the sorted halves
+    return merge(left_sorted, right_sorted)
+
+
+def merge(left: list[int], right: list[int]):
+    """
+    Merges two sorted lists into one sorted list.
+
+    Args:
+        left (list): The first sorted list.
+        right (list): The second sorted list.
+
+    Returns:
+        list: A new list containing all elements from left and right, sorted.
+    """
+    merged: list[int] = []
+    left_index = 0
+    right_index = 0
+
+    # Compare elements from left and right lists and append the smaller element to merged list
+    while left_index < len(left) and right_index < len(right):
+        if left[left_index] < right[right_index]:
+            merged.append(left[left_index])
+            left_index += 1
+        else:
+            merged.append(right[right_index])
+            right_index += 1
+
+    # If there are remaining elements in left or right, append them
+    merged.extend(left[left_index:])
+    merged.extend(right[right_index:])
+
+    return merged
