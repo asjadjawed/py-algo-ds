@@ -12,6 +12,7 @@ from py_algo_ds.algorithms.basic_recursion import (
     count_items_rec,
     find_max_rec,
     sum_items_rec,
+    zip_map,
 )
 
 
@@ -52,3 +53,12 @@ def test_rec_max():
     assert math.isnan(find_max_rec([]))
     assert find_max_rec([42]) == 42
     assert find_max_rec([-1, -2, -3, -4, -5]) == -1
+
+
+def test_zip_map_basic():
+    assert zip_map(["a", "b", "c"], [1, 2, 3]) == {"a": 1, "b": 2, "c": 3}
+    assert zip_map([], []) == {}
+    assert zip_map(["x"], [10]) == {"x": 10}
+    assert zip_map(["k1", "k2"], [100]) == {"k1": 100}
+    assert zip_map(["k1"], [100, 200]) == {"k1": 100}
+    assert zip_map(["a", "b"], [1, 2]) == {"a": 1, "b": 2}

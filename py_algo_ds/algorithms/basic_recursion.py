@@ -81,3 +81,42 @@ def find_max_rec(arr: list[int]) -> float:
         return arr[0]
     sub_max = find_max_rec(arr[1:])
     return arr[0] if arr[0] > sub_max else sub_max
+
+
+def zip_map(keys: list[str], values: list[int]):
+    """
+    Creates a dictionary by pairing elements from the `keys` and `values` lists.
+    The function recursively pairs the first element of `keys` with the first element of `values`,
+    then proceeds with the rest of the lists.
+
+    Args:
+        keys (list): A list of keys for the dictionary.
+        values (list): A list of values for the dictionary.
+
+    Returns:
+        dict: A dictionary with keys from `keys` and values from `values`.
+
+    Examples:
+        >>> zip_map(['a', 'b', 'c'], [1, 2, 3])
+        {'a': 1, 'b': 2, 'c': 3}
+
+        >>> zip_map([], [])
+        {}
+
+        >>> zip_map(['x', 'y'], [10, 20])
+        {'x': 10, 'y': 20}
+
+        >>> zip_map(['k1'], [100])
+        {'k1': 100}
+
+        >>> zip_map(['k1', 'k2'], [100])
+        {'k1': 100}
+    """
+    if not len(keys) or not len(values):
+        # it goes depth first to get the base case map to build
+        return {}
+    # this dictionary is returned from the base case first
+    my_dict = zip_map(keys[1:], values[1:])
+    # then it is populated after the recursive call
+    my_dict[keys[0]] = values[0]
+    return my_dict
