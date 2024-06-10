@@ -79,7 +79,9 @@ def find_max_rec(arr: list[int]) -> float:
         return float("nan")
     if len(arr) == 1:
         return arr[0]
+    # we recurse and get the base results
     sub_max = find_max_rec(arr[1:])
+    # as the stack winds up the result is calculated at each step
     return arr[0] if arr[0] > sub_max else sub_max
 
 
