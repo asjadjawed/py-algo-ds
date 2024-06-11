@@ -12,6 +12,7 @@ from py_algo_ds.algorithms.basic_recursion import (
     count_items_rec,
     count_nested_level,
     find_max_rec,
+    reverse_string,
     sum_items_rec,
     zip_map,
 )
@@ -54,6 +55,24 @@ def test_rec_max():
     assert math.isnan(find_max_rec([]))
     assert find_max_rec([42]) == 42
     assert find_max_rec([-1, -2, -3, -4, -5]) == -1
+
+
+def test_reverse_string_regular():
+    assert reverse_string("hello") == "olleh"
+    assert reverse_string("open") == "nepo"
+
+
+def test_reverse_string_single_char():
+    assert reverse_string("a") == "a"
+
+
+def test_reverse_string_empty():
+    assert reverse_string("") == ""
+
+
+def test_reverse_string_palindrome():
+    assert reverse_string("madam") == "madam"
+    assert reverse_string("racecar") == "racecar"
 
 
 def test_zip_map_basic():

@@ -85,6 +85,21 @@ def find_max_rec(arr: list[int]) -> float:
     return arr[0] if arr[0] > sub_max else sub_max
 
 
+def reverse_string(s):
+    """
+    Reverse a given string using recursion.
+
+    Args:
+        s (str): The string to be reversed.
+
+    Returns:
+        str: The reversed string.
+    """
+    if len(s) <= 1:
+        return s
+    return s[-1] + reverse_string(s[:-1])
+
+
 def zip_map(keys: list[str], values: list[int]):
     """
     Creates a dictionary by pairing elements from the `keys` and `values` lists.
