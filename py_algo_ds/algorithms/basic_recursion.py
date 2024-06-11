@@ -123,3 +123,25 @@ def zip_map(keys: list[str], values: list[int]):
     my_dict[keys[0]] = values[0]
     # and step by step dict is built and returned
     return my_dict
+
+
+def count_nested_level(nested_docs, target_doc, level=1):
+    """
+    Count the number of nested levels a target document is located in a nested document structure.
+
+    Args:
+        nested_docs (dict): A dictionary where keys are document IDs and values are nested dictionaries
+                                representing the nested structure.
+        target_doc (str): The ID of the document to search for.
+        level (int): The current level of nesting. Defaults to 1.
+
+    Returns:
+        int: The level at which the target document is found, or -1 if the document is not found.
+    """
+    for doc in nested_docs:
+        if doc == target_doc:
+            return level
+        result = count_nested_level(nested_docs[doc], target_doc, level + 1)
+        if result != -1:
+            return result
+    return -1

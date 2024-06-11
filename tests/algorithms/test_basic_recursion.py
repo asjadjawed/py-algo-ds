@@ -10,6 +10,7 @@ from py_algo_ds.algorithms.basic_recursion import (
     count_backwards_rec,
     count_forward_rec,
     count_items_rec,
+    count_nested_level,
     find_max_rec,
     sum_items_rec,
     zip_map,
@@ -62,3 +63,25 @@ def test_zip_map_basic():
     assert zip_map(["k1", "k2"], [100]) == {"k1": 100}
     assert zip_map(["k1"], [100, 200]) == {"k1": 100}
     assert zip_map(["a", "b"], [1, 2]) == {"a": 1, "b": 2}
+
+
+def test_count_nested_levels_found():
+    nested_docs = {"doc1": {"doc2": {"doc3": {}}, "doc4": {}}, "doc5": {}}
+    assert count_nested_level(nested_docs, "doc3") == 3
+    assert count_nested_level(nested_docs, "doc4") == 2
+
+
+def test_count_nested_levels_not_found():
+    nested_docs = {"doc1": {"doc2": {"doc3": {}}, "doc4": {}}, "doc5": {}}
+    assert count_nested_level(nested_docs, "doc6") == -1
+
+
+def test_count_nested_levels_root():
+    nested_docs = {"doc1": {"doc2": {"doc3": {}}, "doc4": {}}, "doc5": {}}
+    assert count_nested_level(nested_docs, "doc1") == 1
+    assert count_nested_level(nested_docs, "doc5") == 1
+
+
+def test_count_nested_levels_deeper_nesting():
+    nested_docs = {"doc1": {"doc2": {"doc3": {"doc6": {}}}, "doc4": {}}, "doc5": {}}
+    assert count_nested_level(nested_docs, "doc6") == 4
