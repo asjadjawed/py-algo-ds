@@ -139,9 +139,16 @@ def count_nested_level(nested_docs, target_doc, level=1):
         int: The level at which the target document is found, or -1 if the document is not found.
     """
     for doc in nested_docs:
+        # if doc is found we return the level (base case)
         if doc == target_doc:
             return level
+        # else we recurse and examine the result
         result = count_nested_level(nested_docs[doc], target_doc, level + 1)
+        # result of -1 indicates we didn't find anything on this recursive call and we let the loop continue
         if result != -1:
+            # we exit the function and end recursion if we find something form the base case above
             return result
+    # this will be return from every recursive call where doc is not found
+    # this is also the default result if we don't find anything
+    # the default result also lets the loop continue, until it runs out of cases to recurse on
     return -1
