@@ -48,13 +48,6 @@ $ pre-commit autoupdate
 # Updating dependencies
 ```
 
-### REPL (IPython)
-
-```bash
-$ ipython
-# In [1]:
-```
-
 ### Run pre-commit hooks
 
 ```bash
@@ -65,14 +58,14 @@ $ pre-commit run --all-files
 ### Code formatting
 
 ```bash
-$ ruff format
+$ uvx ruff format
 # 20 files left unchanged
 ```
 
 ### Code Linting
 
 ```bash
-$ ruff check
+$ uvx ruff check
 # All checks passed!
 ```
 
