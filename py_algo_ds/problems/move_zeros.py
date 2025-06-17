@@ -1,4 +1,4 @@
-def move_zeros(nums: list[int]) -> list[int]:
+def move_zeros(nums: list[int]):
     """
     Moves all zeros in the provided list to the end, while maintaining the relative
     order of non-zero elements.
@@ -20,4 +20,3 @@ def move_zeros(nums: list[int]) -> list[int]:
         if nums[fast] != 0:
             nums[slow], nums[fast] = nums[fast], nums[slow]
             slow += 1
-    return nums
