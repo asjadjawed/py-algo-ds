@@ -36,14 +36,14 @@ $ ./install-hooks.sh
 ### Install Packages
 
 ```bash
-$ poetry install --sync
+$ uv sync
 # Installing dependencies from lock file
 ```
 
 ### Update Packages
 
 ```bash
-$ poetry update --sync
+$ uv sync --upgrade
 $ pre-commit autoupdate
 # Updating dependencies
 ```
